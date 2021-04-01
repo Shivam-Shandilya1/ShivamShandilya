@@ -1,6 +1,8 @@
 var express =require("express");
 var bodyParser=require("body-parser");
+var https =require("https");
 var app =express();
+app.use(express.static("public"));
 app.get("/",function(req,res)
 {
     res.sendFile(__dirname+"/index.html");
